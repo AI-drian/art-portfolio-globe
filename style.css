@@ -30,23 +30,28 @@ body {
   
 #globe-container {
   width: 100vw;
-  height: calc(100vh - 140px); /* Adjust this value to fine-tune placement */
+  height: calc(100vh - 280px); /* Adjust this value to fine-tune placement */
   display: flex;
   align-items: center; /* Vertically center the globe */
   justify-content: center; /* Horizontally center the globe */
   position: relative;
   margin-top: -140px; /* Fine-tune the position upwards */
+  transform: scale(0.85);
 }
 
   /* Style the header */
   header {
-    position: relative; /* Change from absolute to relative */
-    padding: 20px; /* Space inside the header */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.75); /* Base semi-transparent black */
     color: #fff;
     text-align: center;
-    z-index: 10; /* Keeps it above other content */
-    margin-bottom: 30px; /* Add space below the header */
+    z-index: 10; /* Ensures text is above the background */
+    margin-bottom: 30px; /* Adds space below the header */
+    background-image: url('images/star-specks.jpg'); /* Path to star image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the background image */
+    background-blend-mode: overlay; /* Combines the black and stars for transparency */
   }
 
 header h1 {
@@ -61,7 +66,7 @@ header p {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.6); /* Black background */
+  background: rgba(0, 0, 0, 0.7); /* Black background */
   color: white; /* White text */
   text-align: center; /* Center the text */
   padding: 10px 5px; /* Add space inside the footer */
@@ -70,6 +75,10 @@ footer {
   bottom: 0; /* Align it to the bottom of the page */
   width: 100%; /* Ensure it spans the full width */
   margin-top: 20px;
+  background-image: url('images/star-specks.jpg'); /* Path to star image */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 footer a {
