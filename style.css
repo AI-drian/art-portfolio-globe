@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Arial, sans-serif;
+  }
+  
+  #globe-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+  }
+  
