@@ -1,3 +1,16 @@
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  main {
+      padding: 10px;
+  }
+  h1 {
+      font-size: 24px;
+  }
+  section {
+      border: none;
+  }
+}
+
 body {
     margin: 0;
     overflow: hidden; /* Prevent scrolling */
@@ -9,4 +22,27 @@ body {
     height: 100vh; /* Full viewport height */
     position: relative;
   }
-  
+  /* Style the header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: #fff; /* White text */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  z-index: 10; /* Ensure it stays on top of the globe */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem; /* Main title size */
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem; /* Subtitle size */
+  color: #ddd; /* Slightly lighter text */
+}
