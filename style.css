@@ -12,11 +12,11 @@
 }
 
 body {
-    margin: 0;
-    overflow: hidden; /* Prevent scrolling */
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-  }
+  background-image: url('images/star-specks.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 
   /* Style the logo */
   header .logo {
@@ -43,7 +43,7 @@ body {
   header {
     position: relative;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.75); /* Base semi-transparent black */
+    background: rgba(0, 0, 0, 0.35); /* Base semi-transparent black */
     color: #fff;
     text-align: center;
     z-index: 10; /* Ensures text is above the background */
@@ -66,7 +66,7 @@ header p {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.7); /* Black background */
+  background: rgba(0, 0, 0, 0.35); /* Black background */
   color: white; /* White text */
   text-align: center; /* Center the text */
   padding: 10px 5px; /* Add space inside the footer */
@@ -89,4 +89,45 @@ footer a {
 footer a:hover {
   text-decoration: underline; /* Adds underline on hover */
 }
+
+/* Menu styling */
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20; /* Make sure it's above other content */
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+}
+
+.menu-links li {
+  padding: 10px;
+  text-align: right;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-links li a:hover {
+  text-decoration: underline;
+}
+
 

@@ -13,3 +13,8 @@ globe.controls().autoRotateSpeed = 0.5;
 
 // Console log when ready
 console.log('The globe is up and spinning!');
+
+function toggleMenu() {
+  const menuLinks = document.querySelector('.menu-links');
+  menuLinks.style.display = menuLinks.style.display === 'block' ? 'none' : 'block';
+}
