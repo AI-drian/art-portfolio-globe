@@ -15,26 +15,39 @@ body {
     margin: 0;
     overflow: hidden; /* Prevent scrolling */
     font-family: Arial, sans-serif;
+    background-color: #000000;
   }
-  
-  #globe-container {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    position: relative;
-  }
-  /* Style the header */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-  color: #fff; /* White text */
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  z-index: 10; /* Ensure it stays on top of the globe */
+
+  /* Style the logo */
+  header .logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10%; /* Optional: Makes the logo circular */
+  margin-bottom: 10px; /* Adds space below the logo */
 }
+  
+#globe-container {
+  width: 100vw;
+  height: calc(100vh - 140px); /* Adjust this value to fine-tune placement */
+  display: flex;
+  align-items: center; /* Vertically center the globe */
+  justify-content: center; /* Horizontally center the globe */
+  position: relative;
+  margin-top: -140px; /* Fine-tune the position upwards */
+}
+
+  /* Style the header */
+  header {
+    position: relative; /* Change from absolute to relative */
+    padding: 20px; /* Space inside the header */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: #fff;
+    text-align: center;
+    z-index: 10; /* Keeps it above other content */
+    margin-bottom: 30px; /* Add space below the header */
+  }
 
 header h1 {
   margin: 0;
@@ -46,3 +59,25 @@ header p {
   font-size: 1.2rem; /* Subtitle size */
   color: #ddd; /* Slightly lighter text */
 }
+
+footer {
+  background: rgba(0, 0, 0, 0.6); /* Black background */
+  color: white; /* White text */
+  text-align: center; /* Center the text */
+  padding: 10px 5px; /* Add space inside the footer */
+  font-size: 0.9rem; /* Slightly smaller text */
+  position: absolute; /* Make the footer stick to the bottom of the viewport */
+  bottom: 0; /* Align it to the bottom of the page */
+  width: 100%; /* Ensure it spans the full width */
+  margin-top: 20px;
+}
+
+footer a {
+  color: #87ceeb; /* Light blue for the email link */
+  text-decoration: none; /* Removes the underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
