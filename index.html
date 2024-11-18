@@ -21,13 +21,20 @@
     <li><a href="selected-works.html">Selected Works</a></li>
   </ul>
 </nav>
-
   <div id="globe-container" style="width: 100vw; height: 100vh;"></div>
   <!-- Load Globe.gl from the CDN -->
   <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
   <script src="script.js"></script>
   <footer>
-    <p>© 2024 Kopia | <a href="">Contact Me</a></p>
-  </footer>  
+    <p>© 2024 Kopia | <a href=""></a></p>  <!-- insert contact me between a tags -->
+  </footer>
+  <div id="popup" class="popup hidden">
+    <img id="popup-image" src="" alt="Mural Image">
+    <div id="popup-content">
+      <h3 id="popup-title"></h3>
+      <p id="popup-description"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>     
 </body>
 </html>

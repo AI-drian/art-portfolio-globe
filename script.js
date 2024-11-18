@@ -1,8 +1,55 @@
 const muralLocations = [
-  { lat: 40.73061, lng: -73.935242, name: "Mural 1", description: "A vibrant mural in New York City" },
-  { lat: 48.8566, lng: 2.3522, name: "Mural 2", description: "A stunning artwork in Paris" },
-  { lat: 35.6895, lng: 139.6917, name: "Mural 3", description: "A colorful piece in Tokyo" },
+  {
+    lat: 55.592111,
+    lng: 13.011901,
+    name: "Carl-Bertil",
+    description: "2020",
+    image: "images/pieces/Cartbertil.jpg"
+  },
+  {
+    lat: 59.388171,
+    lng: 17.903920,
+    name: "Blue-Hair",
+    description: "2021",
+    image: "images/pieces/Bluehair.jpg"
+  },
+  {
+    lat: 56.033995,
+    lng: 12.707318,
+    name: "Pink-Panther",
+    description: "2021",
+    image: "images/pieces/Pinkpanther.jpg"
+  },
+  {
+    lat: 55.592111,
+    lng: 13.011901,
+    name: "Herman Hedning",
+    description: "2020",
+    image: "images/pieces/Hermanhedning.jpg"
+  },
+  {
+    lat: 55.592100,
+    lng: 13.011901,
+    name: "Fruits",
+    description: "2021",
+    image: "images/pieces/Fruitvan.jpg"
+  },
+  {
+    lat: 55.601222,
+    lng: 13.005350,
+    name: "Rent out the empty rooms in your mind",
+    description: "2020",
+    image: "images/pieces/Rentouttheemptyroomsinyourmind.jpg"
+  },
+  {
+    lat: 55.592111,
+    lng: 13.011981,
+    name: "Skeletor",
+    description: "2021",
+    image: "images/pieces/Skeletor.jpg"
+  },
 ];
+
 
 // Initialize the globe
 const globe = Globe()(document.getElementById('globe-container'))
@@ -53,8 +100,34 @@ globe.pointLabel(({ name, description }) => `
   </div>
 `);
 
-
 function toggleMenu() {
   const menuLinks = document.querySelector('.menu-links');
   menuLinks.style.display = menuLinks.style.display === 'block' ? 'none' : 'block';
 }
+
+function openPopup({ name, description, image }) {
+  // Populate the popup with data
+  document.getElementById("popup-title").innerText = name;
+  document.getElementById("popup-description").innerText = description;
+  document.getElementById("popup-image").src = image;
+
+  // Show the popup
+  const popup = document.getElementById("popup");
+  popup.classList.remove("hidden");
+}
+
+function closePopup() {
+  // Hide the popup
+  const popup = document.getElementById("popup");
+  popup.classList.add("hidden");
+}
+
+// Add click event to globe points
+globe.onPointClick((point) => {
+  if (point) {
+    openPopup(point); // Open popup with point data
+  } else {
+    console.log("No point clicked");
+  }
+});
+
