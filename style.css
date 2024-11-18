@@ -11,6 +11,13 @@
   }
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
+  height: 100%; /* Ensures the entire page fits the viewport */
+}
+
 body {
   background-image: url('images/star-specks.jpg');
   background-size: cover;
@@ -67,16 +74,15 @@ header p {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.35); /* Black background */
   color: white; /* White text */
-  text-align: center; /* Center the text */
+  text-align: center;
   padding: 10px 5px; /* Add space inside the footer */
   font-size: 0.9rem; /* Slightly smaller text */
-  position: absolute; /* Make the footer stick to the bottom of the viewport */
+  position: absolute; /* Stick to the bottom of the viewport */
   bottom: 0; /* Align it to the bottom of the page */
   width: 100%; /* Ensure it spans the full width */
-  margin-top: 20px;
-  background-image: url('images/star-specks.jpg'); /* Path to star image */
+  margin-top: 0; /* Remove unnecessary space above the footer */
+  background-image: url('images/star-specks.jpg');
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
